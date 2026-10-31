@@ -1,1 +1,302 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>सुशीला क्लिनिक | Sushila Clinic, Handia, Prayagraj</title>
+<meta name="description" content="सुशीला क्लिनिक, यासीनपुर आराकला, हंडिया, प्रयागराज। Sushila Clinic - check-up, advice and treatment for common illnesses.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --g:#16a34a; --g2:#22c55e; --gd:#0f5132; --ink:#10261a; --mut:#5b6e63;
+    --bg:#f3f6f1; --card:#ffffff; --lime:#d9f27a; --line:#e3ebe4;
+    --r:22px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Poppins","Noto Sans Devanagari",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 18px}
+  a{color:inherit}
 
+  /* NAV */
+  .nav{position:sticky;top:10px;z-index:20;margin:10px auto 0;max-width:1040px;padding:0 12px}
+  .nav-in{background:rgba(255,255,255,.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:999px;padding:8px 8px 8px 16px;display:flex;align-items:center;justify-content:space-between;gap:8px;box-shadow:0 6px 24px rgba(16,38,26,.08)}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:700;text-decoration:none;font-size:1rem}
+  .logo i{width:34px;height:34px;border-radius:10px;background:var(--g);display:grid;place-items:center;color:#fff;font-style:normal;font-size:1.1rem}
+  .logo small{display:block;font-weight:500;font-size:.68rem;color:var(--mut);margin-top:-4px}
+  .links{display:none;gap:22px;font-size:.9rem;font-weight:500}
+  .links a{text-decoration:none;color:var(--mut)}
+  .links a:hover{color:var(--g)}
+  .pill{background:var(--g);color:#fff;text-decoration:none;font-weight:600;font-size:.88rem;padding:10px 18px;border-radius:999px;white-space:nowrap}
+  @media(min-width:760px){.links{display:flex}}
+
+  /* HERO */
+  .hero{margin-top:14px}
+  .hero-card{position:relative;overflow:hidden;border-radius:32px;color:#fff;padding:38px 24px 0;
+    background:radial-gradient(1200px 500px at 85% -10%,#4ade80 0%,transparent 55%),
+               radial-gradient(700px 400px at -10% 110%,#15803d 0%,transparent 60%),
+               linear-gradient(160deg,#0f5132,#16a34a)}
+  .tag{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);padding:6px 14px;border-radius:999px;font-size:.78rem;font-weight:500}
+  .hero h1{font-size:clamp(1.9rem,6vw,3.2rem);line-height:1.2;margin:16px 0 10px;font-weight:700;letter-spacing:-.5px}
+  .hero h1 em{font-style:normal;color:var(--lime)}
+  .hero p{max-width:520px;opacity:.95;font-size:1rem}
+  .hero p span{display:block;opacity:.8;font-size:.9rem;margin-top:4px}
+  .cta{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 28px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:999px;font-weight:600;text-decoration:none;font-size:.95rem;transition:transform .15s}
+  .btn:active{transform:scale(.97)}
+  .btn-w{background:#fff;color:var(--gd)}
+  .btn-o{border:1.5px solid rgba(255,255,255,.7);color:#fff}
+  .hero-bottom{display:grid;gap:14px;grid-template-columns:1fr;padding-bottom:26px}
+  .mini{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:18px;padding:14px 16px;display:flex;gap:12px;align-items:center}
+  .mini b{display:block;font-size:.95rem}
+  .mini span{font-size:.8rem;opacity:.85}
+  .mini i{font-style:normal;font-size:1.5rem;background:rgba(255,255,255,.2);width:44px;height:44px;border-radius:14px;display:grid;place-items:center;flex:none}
+  @media(min-width:760px){.hero-card{padding:56px 48px 0}.hero-bottom{grid-template-columns:repeat(3,1fr)}}
+  .photo{display:none}
+  .photo.on{display:block;margin:0 0 22px;border-radius:20px;max-height:260px;width:100%;object-fit:cover;border:3px solid rgba(255,255,255,.35)}
+
+  .vid{position:relative;margin:0 0 22px;border-radius:22px;overflow:hidden;border:3px solid rgba(255,255,255,.35);background:#0f5132;aspect-ratio:16/9;box-shadow:0 18px 40px rgba(0,0,0,.25)}
+  .vid video{width:100%;height:100%;object-fit:cover;display:block}
+
+  /* GENERIC */
+  section{padding:44px 0 6px}
+  .eyebrow{color:var(--g);font-weight:600;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase}
+  h2{font-size:clamp(1.5rem,4.5vw,2.2rem);line-height:1.25;margin:6px 0 6px;font-weight:700;letter-spacing:-.3px}
+  .sub{color:var(--mut);max-width:600px;margin-bottom:22px}
+
+  /* DOCTOR */
+  .doc{background:var(--card);border-radius:var(--r);border:1px solid var(--line);display:flex;gap:18px;align-items:center;padding:20px;box-shadow:0 8px 28px rgba(16,38,26,.06)}
+  .av{width:84px;height:84px;border-radius:24px;background:linear-gradient(140deg,var(--lime),#a7e36b);display:grid;place-items:center;font-size:2.4rem;flex:none}
+  .doc h3{font-size:1.2rem}
+  .doc p{color:var(--mut);font-size:.92rem}
+  .chip{display:inline-block;background:#e8f6ec;color:var(--gd);font-weight:600;font-size:.78rem;padding:4px 12px;border-radius:999px;margin-top:8px}
+
+  /* STEPS */
+  .steps{display:grid;gap:12px}
+  @media(min-width:760px){.steps{grid-template-columns:repeat(3,1fr)}}
+  .step{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px}
+  .step .n{width:38px;height:38px;border-radius:50%;background:var(--g);color:#fff;font-weight:700;display:grid;place-items:center;margin-bottom:12px}
+  .step h3{font-size:1.02rem}
+  .step p{color:var(--mut);font-size:.9rem;margin-top:4px}
+
+  /* SEARCH + GRID */
+  .search{position:relative;margin-bottom:18px}
+  .search input{width:100%;padding:15px 18px 15px 48px;border-radius:999px;border:1.5px solid var(--line);background:#fff;font:inherit;font-size:.95rem;outline:none;box-shadow:0 4px 16px rgba(16,38,26,.05)}
+  .search input:focus{border-color:var(--g)}
+  .search::before{content:"🔍";position:absolute;left:18px;top:50%;transform:translateY(-50%)}
+  .grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(235px,1fr))}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:16px;display:flex;gap:12px;transition:transform .2s,box-shadow .2s}
+  .card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(16,38,26,.1)}
+  .ic{width:46px;height:46px;border-radius:14px;background:#e8f6ec;display:grid;place-items:center;font-size:1.4rem;flex:none}
+  .card h3{font-size:1rem;line-height:1.3}
+  .card h3 span{display:block;color:var(--g);font-weight:500;font-size:.8rem}
+  .card p{font-size:.86rem;color:#2f4638;margin-top:4px}
+  .card p i{display:block;color:var(--mut);font-style:normal;font-size:.82rem}
+  .empty{display:none;text-align:center;color:var(--mut);padding:20px}
+
+  /* LONG TERM */
+  .long{display:grid;gap:12px}
+  @media(min-width:760px){.long{grid-template-columns:repeat(3,1fr)}}
+  .lc{background:linear-gradient(180deg,#fff,#f4faf5);border:1px solid var(--line);border-radius:var(--r);padding:20px}
+  .lc .ic{margin-bottom:10px;background:var(--lime)}
+  .lc h3{font-size:1.1rem}
+  .lc h3 span{color:var(--g);font-weight:500;font-size:.85rem;margin-left:4px}
+  .lc p{font-size:.9rem;margin-top:6px;color:#2f4638}
+  .lc p i{display:block;font-style:normal;color:var(--mut);font-size:.85rem;margin-top:4px}
+  .note{margin-top:14px;background:#fffbe6;border:1px solid #f1e3a0;border-radius:18px;padding:14px 16px;font-size:.88rem}
+
+  /* FAQ */
+  details{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px 18px;margin-bottom:10px}
+  summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:10px;font-size:.96rem}
+  summary::after{content:"＋";color:var(--g);font-weight:700}
+  details[open] summary::after{content:"－"}
+  details p{margin-top:8px;color:var(--mut);font-size:.9rem}
+
+  /* CONTACT */
+  .contact{background:linear-gradient(160deg,#0f5132,#16a34a);color:#fff;border-radius:32px;padding:30px 22px;display:grid;gap:20px}
+  @media(min-width:760px){.contact{grid-template-columns:1.2fr 1fr;padding:44px}}
+  .contact h2{color:#fff}
+  .contact p{opacity:.92}
+  .row{display:flex;gap:12px;align-items:flex-start;margin-top:14px}
+  .row i{font-style:normal;background:rgba(255,255,255,.18);width:42px;height:42px;border-radius:13px;display:grid;place-items:center;flex:none}
+  .row a{font-weight:600;text-decoration:none}
+  .row small{display:block;opacity:.8}
+  .cbtns{display:flex;flex-direction:column;gap:10px;justify-content:center}
+  .cbtns .btn{justify-content:center}
+
+  footer{text-align:center;color:var(--mut);font-size:.8rem;padding:28px 16px 100px}
+
+  /* FLOATING CALL (mobile) */
+  .float{position:fixed;left:14px;right:14px;bottom:14px;z-index:30;display:flex;gap:10px}
+  .float a{flex:1;text-align:center;padding:14px;border-radius:999px;font-weight:600;text-decoration:none;box-shadow:0 10px 26px rgba(0,0,0,.22);font-size:.95rem}
+  .float .c{background:var(--g);color:#fff}
+  .float .w{background:#fff;color:var(--gd)}
+  @media(min-width:760px){.float{display:none}footer{padding-bottom:30px}}
+</style>
+</head>
+<body>
+
+<div class="nav"><div class="nav-in">
+  <a class="logo" href="#top"><i>✚</i><div>सुशीला क्लिनिक<small>Sushila Clinic</small></div></a>
+  <nav class="links">
+    <a href="#doctor">डॉक्टर · Doctor</a>
+    <a href="#conditions">बीमारियाँ · Conditions</a>
+    <a href="#faq">सवाल · FAQ</a>
+    <a href="#contact">संपर्क · Contact</a>
+  </nav>
+  <a class="pill" href="tel:+917355709950">📞 कॉल करें</a>
+</div></div>
+
+<main id="top">
+<div class="wrap hero">
+  <div class="hero-card">
+    <span class="tag">📍 हंडिया, प्रयागराज · Handia, Prayagraj</span>
+    <h1>आपकी सेहत, <em>हमारी ज़िम्मेदारी</em><br><span style="font-size:.55em;font-weight:500;opacity:.92">Your health, our priority.</span></h1>
+    <p>आम बीमारियों की जाँच, सलाह और इलाज, आपके घर के पास।
+      <span>Check-up, advice and treatment for common illnesses, close to home.</span></p>
+    <div class="cta">
+      <a class="btn btn-w" href="tel:+917355709950">📞 7355709950</a>
+      <a class="btn btn-o" href="https://wa.me/917355709950">💬 WhatsApp</a>
+    </div>
+    <div class="vid">
+      <video id="heroVid" src="hero.mp4" poster="hero-poster.jpg" autoplay muted loop playsinline preload="auto"></video>
+    </div>
+    <img class="photo" id="clinicPhoto" src="clinic.jpg" alt="सुशीला क्लिनिक / Sushila Clinic" onload="this.classList.add('on')" onerror="this.remove()">
+    <div class="hero-bottom">
+      <div class="mini"><i>👨‍⚕️</i><div><b>डॉ. राम अभिलाष</b><span>Dr. Ram Abhilash</span></div></div>
+      <div class="mini"><i>🩺</i><div><b>जाँच व सलाह</b><span>Check-up &amp; advice</span></div></div>
+      <div class="mini"><i>📍</i><div><b>यासीनपुर, आराकला</b><span>Yasinpur, Arakala</span></div></div>
+    </div>
+  </div>
+</div>
+
+<section id="doctor"><div class="wrap">
+  <div class="eyebrow">डॉक्टर · Doctor</div>
+  <h2>आपके अपने डॉक्टर<br><span style="color:var(--mut);font-weight:500;font-size:.6em">Meet your doctor</span></h2>
+  <div class="doc" style="margin-top:16px">
+    <div class="av">👨‍⚕️</div>
+    <div>
+      <h3>डॉ. राम अभिलाष · Dr. Ram Abhilash</h3>
+      <p>सुशीला क्लिनिक, हंडिया, प्रयागराज<br>Sushila Clinic, Handia, Prayagraj</p>
+      <span class="chip">BSc, BMS</span>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="eyebrow">कैसे काम करता है · How it works</div>
+  <h2>तीन आसान कदम<br><span style="color:var(--mut);font-weight:500;font-size:.6em">Three simple steps</span></h2>
+  <div class="steps" style="margin-top:16px">
+    <div class="step"><div class="n">1</div><h3>फ़ोन करें या आएँ · Call or visit</h3><p>नंबर पर कॉल या WhatsApp करें, या सीधे क्लिनिक आएँ।<br>Call or WhatsApp us, or walk in.</p></div>
+    <div class="step"><div class="n">2</div><h3>जाँच · Check-up</h3><p>डॉक्टर आपकी तकलीफ़ सुनकर जाँच करते हैं।<br>The doctor listens and examines you.</p></div>
+    <div class="step"><div class="n">3</div><h3>सलाह व दवा · Advice &amp; medicine</h3><p>सही सलाह, दवा और ज़रूरत हो तो अस्पताल की राय।<br>Proper advice, medicine and hospital referral if needed.</p></div>
+  </div>
+</div></section>
+
+<section id="conditions"><div class="wrap">
+  <div class="eyebrow">आम बीमारियाँ · Common conditions</div>
+  <h2>किस तकलीफ़ में मिलें?<br><span style="color:var(--mut);font-weight:500;font-size:.6em">What can we help you with?</span></h2>
+  <p class="sub">अपनी तकलीफ़ खोजिए / Search your problem</p>
+  <div class="search"><input id="q" type="search" placeholder="जैसे: बुखार, fever, दाद…" autocomplete="off"></div>
+  <div class="grid" id="common"></div>
+  <div class="empty" id="empty">कुछ नहीं मिला। कृपया फ़ोन करके पूछें। / Nothing found. Please call us to ask.</div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="eyebrow">लंबी बीमारियाँ · Long-term conditions</div>
+  <h2>जाँच, सलाह और सही मार्गदर्शन<br><span style="color:var(--mut);font-weight:500;font-size:.6em">Check-up, advice and the right guidance</span></h2>
+  <div class="long" style="margin-top:16px">
+    <div class="lc"><div class="ic">🩸</div><h3>शुगर <span>Diabetes</span></h3>
+      <p>शुगर की जाँच, खान-पान और दिनचर्या की सलाह, नियमित फॉलो-अप।<i>Sugar check, diet and lifestyle advice, regular follow-up.</i></p></div>
+    <div class="lc"><div class="ic">⚡</div><h3>मिर्गी <span>Epilepsy</span></h3>
+      <p>पहली जाँच और सलाह। दौरे के मरीज़ को विशेषज्ञ (न्यूरोलॉजिस्ट) को भी दिखाएँ।<i>First consultation and advice. Also see a specialist (neurologist).</i></p></div>
+    <div class="lc"><div class="ic">🧠</div><h3>लकवा <span>Paralysis / Stroke</span></h3>
+      <p>लकवे के लक्षण दिखें तो तुरंत अस्पताल जाएँ। यहाँ प्राथमिक सलाह और रेफ़र की सुविधा।<i>If signs appear, go to a hospital immediately. Basic advice and referral here.</i></p></div>
+  </div>
+  <div class="note">
+    ⚠️ <b>ज़रूरी सूचना:</b> शुगर, मिर्गी और लकवे जैसी बीमारियों में अपनी दवा अपने आप बंद न करें और विशेषज्ञ की सलाह लेते रहें। गंभीर हालत में नज़दीकी अस्पताल जाएँ।<br>
+    <b>Important:</b> Do not stop your regular medicines on your own, and keep consulting a specialist. In a serious condition, go to the nearest hospital.
+  </div>
+</div></section>
+
+<section id="faq"><div class="wrap">
+  <div class="eyebrow">अक्सर पूछे सवाल · FAQ</div>
+  <h2>आपके सवाल<br><span style="color:var(--mut);font-weight:500;font-size:.6em">Your questions</span></h2>
+  <div style="margin-top:16px">
+    <details><summary>क्लिनिक कहाँ है? · Where is the clinic?</summary>
+      <p>यासीनपुर, आराकला, हंडिया, प्रयागराज।<br>Yasinpur, Arakala, Handia, Prayagraj.</p></details>
+    <details><summary>अपॉइंटमेंट कैसे लें? · How do I get an appointment?</summary>
+      <p>7355709950 या 9651412391 पर फ़ोन करें, या WhatsApp भेजें।<br>Call 7355709950 or 9651412391, or send a WhatsApp message.</p></details>
+    <details><summary>क्या गंभीर बीमारी में भी यहीं इलाज होगा? · Can serious illness be treated here?</summary>
+      <p>नहीं। गंभीर हालत (जैसे लकवा, तेज़ दौरे, सीने में तेज़ दर्द) में तुरंत नज़दीकी अस्पताल जाएँ। हम जाँच, सलाह और सही जगह भेजने में मदद करते हैं।<br>No. In serious situations (such as paralysis, severe seizures, severe chest pain) go to the nearest hospital immediately. We help with check-up, advice and referral.</p></details>
+  </div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+  <div class="contact">
+    <div>
+      <div class="eyebrow" style="color:var(--lime)">संपर्क · Contact</div>
+      <h2>आइए या फ़ोन कीजिए<br><span style="font-weight:500;font-size:.6em;opacity:.9">Visit or call us</span></h2>
+      <div class="row"><i>📍</i><div><b>पता · Address</b><small>यासीनपुर, आराकला, हंडिया, प्रयागराज<br>Yasinpur, Arakala, Handia, Prayagraj</small></div></div>
+      <div class="row"><i>📞</i><div><b>फ़ोन · Phone</b><small><a href="tel:+917355709950">7355709950</a> · <a href="tel:+919651412391">9651412391</a></small></div></div>
+    </div>
+    <div class="cbtns">
+      <a class="btn btn-w" href="tel:+917355709950">📞 अभी कॉल करें · Call now</a>
+      <a class="btn btn-o" href="https://wa.me/917355709950">💬 WhatsApp</a>
+      <a class="btn btn-o" href="https://www.google.com/maps/search/?api=1&query=Yasinpur+Arakala+Handia+Prayagraj" target="_blank" rel="noopener">🗺️ नक्शा · Map</a>
+    </div>
+  </div>
+</div></section>
+</main>
+
+<footer>
+  © सुशीला क्लिनिक · Sushila Clinic, Handia, Prayagraj<br>
+  यह वेबसाइट सामान्य जानकारी के लिए है; इलाज के लिए डॉक्टर से मिलें।<br>
+  For general information only; please consult the doctor for treatment.
+</footer>
+
+<div class="float">
+  <a class="c" href="tel:+917355709950">📞 कॉल · Call</a>
+  <a class="w" href="https://wa.me/917355709950">💬 WhatsApp</a>
+</div>
+
+<script>
+  var items = [
+    ["🤒","बुखार","Fever","शरीर का तापमान बढ़ना, कँपकँपी या बदन टूटना।","Raised body temperature, chills or body weakness."],
+    ["🤧","सर्दी-ज़ुकाम","Cold","नाक बहना, छींक आना, गला भारी होना।","Runny nose, sneezing, heavy throat."],
+    ["😷","खाँसी","Cough","सूखी या बलगम वाली खाँसी।","Dry cough or cough with phlegm."],
+    ["🗣️","गले में दर्द","Sore throat","निगलने में दर्द या गले में खराश।","Pain while swallowing or throat irritation."],
+    ["🤕","सिरदर्द","Headache","सिर में हल्का या तेज़ दर्द।","Mild or severe pain in the head."],
+    ["🤢","पेट दर्द","Stomach ache","पेट में ऐंठन या दर्द।","Cramps or pain in the stomach."],
+    ["💧","दस्त","Diarrhea","पतले दस्त; पानी की कमी से बचाव ज़रूरी।","Loose motions; preventing dehydration is important."],
+    ["🥣","कब्ज़","Constipation","पेट साफ़ न होना।","Difficulty passing stool."],
+    ["🤮","उल्टी","Vomiting","बार-बार उल्टी आना।","Repeated vomiting."],
+    ["😖","जी मिचलाना","Nausea","उल्टी जैसा महसूस होना।","Feeling like vomiting."],
+    ["😵‍💫","चक्कर आना","Dizziness","सिर घूमना या कमज़ोरी महसूस होना।","Feeling of spinning or unsteadiness."],
+    ["💪","बदन दर्द","Body ache","हाथ-पैर और शरीर में दर्द।","Pain in the arms, legs and body."],
+    ["🔋","कमज़ोरी","Weakness","थकान और ताक़त की कमी।","Tiredness and lack of energy."],
+    ["🔥","एसिडिटी","Acidity","सीने या पेट में जलन, खट्टी डकार।","Burning in the chest or stomach, sour belching."],
+    ["🌼","एलर्जी","Allergy","छींक, खुजली या दाने किसी चीज़ से हो जाना।","Sneezing, itching or rashes caused by a trigger."],
+    ["🖐️","खुजली","Itching","त्वचा में खुजली।","Itchy skin."],
+    ["🔴","दाने","Rash","त्वचा पर लाल दाने या चकत्ते।","Red spots or patches on the skin."],
+    ["🩺","दाद / चर्म रोग","Ringworm / Skin disease","त्वचा पर गोल, लाल, खुजली वाले निशान, और त्वचा की दूसरी बीमारियाँ।","Round, red, itchy patches on the skin, and other skin problems."],
+    ["🩹","चोट","Injury","कटना, मोच, मरहम-पट्टी।","Cuts, sprains, dressing."],
+    ["🫧","सूजन","Swelling","शरीर के किसी हिस्से में सूजन।","Swelling in any part of the body."]
+  ];
+  var box = document.getElementById("common"), q = document.getElementById("q"), empty = document.getElementById("empty");
+  function render(list){
+    box.innerHTML = list.map(function(x){
+      return '<div class="card"><div class="ic">'+x[0]+'</div><div><h3>'+x[1]+'<span>'+x[2]+'</span></h3><p>'+x[3]+'<i>'+x[4]+'</i></p></div></div>';
+    }).join("");
+    empty.style.display = list.length ? "none" : "block";
+  }
+  render(items);
+  q.addEventListener("input", function(){
+    var s = q.value.trim().toLowerCase();
+    render(items.filter(function(x){ return (x[1]+" "+x[2]+" "+x[3]+" "+x[4]).toLowerCase().indexOf(s) > -1; }));
+  });
+</script>
+</body>
+</html>
